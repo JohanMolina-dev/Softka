@@ -1,0 +1,11 @@
+<div>
+    <label >Dias de estancia</label>
+    <input type="text" [(ngModel)]="nuevaTarifa.diasEstancia" >
+</div>
+<div>
+    <label >Distancia a Recorrer en Kilometros</label>
+    <input type="text" [(ngModel)]="nuevaTarifa.distanciARecorrer">
+</div>
+<button>Enviar</button>
+
+{{ nuevaTarifa | json}}
