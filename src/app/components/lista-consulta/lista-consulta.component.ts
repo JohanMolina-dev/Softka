@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tarifa } from 'src/models/tarifa.model';
 
 @Component({
   selector: 'app-lista-consulta',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-consulta.component.css']
 })
 export class ListaConsultaComponent implements OnInit {
-
-  constructor() { }
-
+@Input() calculoTarifa: Tarifa[];
+  constructor() { 
+    
+  }
+ 
   ngOnInit(): void {
   }
+  
 
 }

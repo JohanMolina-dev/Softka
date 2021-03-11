@@ -1,1 +1,24 @@
-<p>lista-consulta works!</p>
+
+<div class="container mt-5">
+    <table class="table table-warning table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Dias de Estancia</th>
+            <th scope="col">Kilometros a recorrer</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Costo con descuento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let calculo of calculoTarifa">
+            <td>{{calculo.diasEstancia}}</td>
+            <td>{{calculo.distanciARecorrer}}</td>
+            <td> {{calculo.resultado | currency: 'USD' | lowercase}} </td>
+            <td> {{calculo.resultadoDescuento | currency: 'USD' | lowercase}} </td>
+            {{calculo.id | json}}
+          </tr>
+          
+              </tbody>
+      </table>
+</div>
+

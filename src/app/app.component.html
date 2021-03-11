@@ -1,2 +1,30 @@
-<app-calculo-forms></app-calculo-forms>
-<app-lista-consulta></app-lista-consulta>
+<app-calculo-forms (calculoRealizado)="onCalculo($event)"></app-calculo-forms>
+<app-lista-consulta [calculoTarifa]="arrCalculo"></app-lista-consulta>
+
+
+<hr>
+
+
+<app-equipaje (sendController)="onEquipaje($event)"></app-equipaje>
+
+<app-lista-equipaje [calculoPeso]= "arrEquipaje"></app-lista-equipaje>
+<hr>
+<div class="card mb-3">
+    <img src="../assets/dhl.jpg" class="card-img-top" alt="..." width="100%" height="300">
+    <div class="card-body">
+      <h5 class="card-title text-center">Informacion De Carga</h5>
+      
+      <p class="card-text">Total Bultos ingresados para el vuelo: {{tamanio |json}} </p>
+      <p class="card-text">Valor Mercancia en Pesos: {{totalCop |json | currency: 'USD' | lowercase}} </p>
+      <p class="card-text">Valor Mercancia en Dolares: {{totalUsd |json | currency: 'USD' | lowercase }} </p>
+      <p class="card-text">Peso Promedio de la Carga: {{ pesoPromedio }}    KG </p>
+      <p class="card-text">Peso Total de la Carga: {{ pesoTotal  }}     KG </p>
+      <p class="card-text">Equipaje mas liviano: {{minMayor | json}}   KG </p>
+      <p class="card-text">Equipaje mas Pesado: {{numMayor | json}}     KG </p>
+      
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+  
+  

@@ -1,11 +1,24 @@
-<div>
-    <label >Dias de estancia</label>
-    <input type="text" [(ngModel)]="nuevaTarifa.diasEstancia" >
-</div>
-<div>
-    <label >Distancia a Recorrer en Kilometros</label>
-    <input type="text" [(ngModel)]="nuevaTarifa.distanciARecorrer">
-</div>
-<button>Enviar</button>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" >
+          <img src="../../../assets/cosmic.png" alt="" width="80" height="40" class="d-inline-block align-top">
+          Calculo Tiquete de avion
+        </a>
+    </div>
+  </nav>
 
-{{ nuevaTarifa | json}}
+
+
+
+  
+  <div class="container mt-4" >
+    <label class="form-label" >Dias de estancia</label>
+    <input type="text" class="form-control" [(ngModel)]="nuevaTarifa.diasEstancia" >
+
+    <label class="form-label" >Kilometros a recorrer</label>
+    <input type="text"  class="form-control" [(ngModel)]="nuevaTarifa.distanciARecorrer">
+
+<button class="btn btn-primary btn-block mt-3" (click)="onClick()">Enviar</button>
+
+</div>
+
